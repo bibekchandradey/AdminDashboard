@@ -35,11 +35,171 @@
                 </MudGrid>
             </MudItem>
         </MudGrid>
-        <MudGrid>
+        <MudGrid Class="mt-15">
             <MudItem xs="12">
-                <MudPaper>
+                <MudPaper >
                     <MudGrid>
+                        <MudItem xs="10">
+                            <MudText Typo="Typo.h6" Style="font-size:16px" Class="ml-6">
+                                Portfolio Performance
+                            </MudText>
+                        </MudItem>
+                        <MudItem xs="2" Class="mb-3 d-flex justify-center">
+                            <MudButton Variant="Variant.Outlined" Style="font-size:10px">View All</MudButton>
+                        </MudItem>
+                    </MudGrid>
+                    <MudDivider  />
+                    <MudGrid>
+                        <MudItem xs="4" >
+                            <MudText 
+                                Style="
+                                        margin-top:10px;
+                                        margin-left:115px;
+                                      " 
+                                Typo="Typo.body2" 
+                            >
+                                Cash Deposits
+                            </MudText>
+                            <MudGrid>
+                                <MudItem xs="4" >
+                                    <MudFab Class="ml-10" Color="Color.Warning" StartIcon="@Icons.Material.Filled.Devices" />
+                                </MudItem>
+                                <MudItem xs="8">
+                                    <MudText
+                                        Typo="Typo.h4" 
+                                        Style="font-weight:bold;
+                                               margin-left:-10px;
+                                               margin-top:10px"
+                                    >
+                                        1,7M
+                                    </MudText>
+                                </MudItem>
+                            </MudGrid>
+                            <MudGrid Style="
+                                        margin-bottom:10px;
+                                        margin-left:90px;
+                                      ">
+                                
+                                <MudItem xs="1">
+                                    <MudIcon Icon="@Icons.Material.Filled.KeyboardArrowDown"
+                                             Color="Color.Error"
+                                            >
+                                    </MudIcon>
+                                </MudItem>
+                                <MudItem xs="11">
+                                    <MudText 
+                                             Typo="Typo.body2">
+                                        <MudElement Style="color:red; margin-top: -5px">
+                                            54.1%
+                                        </MudElement>
+                                        less earnings
+                                    </MudText>
+                                </MudItem>
+                                
+                            </MudGrid>  
+                        </MudItem>
 
+                        <MudItem xs="4">
+                            <MudText Style="
+                                        margin-top:10px;
+                                        margin-left:115px;
+                                      "
+                                     Typo="Typo.body2">
+                                Invested Dividents
+                            </MudText>
+                            <MudGrid>
+                                <MudItem xs="4">
+                                    <MudFab Class="ml-10" Color="Color.Error" StartIcon="@Icons.Material.Filled.School" />
+                                </MudItem>
+                                <MudItem xs="8">
+                                    <MudText Typo="Typo.h4"
+                                             Style="font-weight:bold;
+                                               margin-left:-10px;
+                                               margin-top:10px">
+                                        9M
+                                    </MudText>
+                                </MudItem>
+                            </MudGrid>
+                            <MudGrid Style="
+                                        margin-bottom:10px;
+                                        margin-left:90px;
+                                      ">
+
+                                <MudItem xs="4">
+                                    <MudText Typo="Typo.body2">
+                                        Grow Rate:
+                                    </MudText>
+                                </MudItem>
+                                <MudItem xs="1" Style="margin-left:-50px">
+                                    <MudIcon Icon="@Icons.Material.Filled.KeyboardArrowDown"
+                                             Color="Color.Error">
+                                    </MudIcon>
+                                </MudItem>
+                                <MudItem xs="7">
+                                    <MudText Typo="Typo.body2">
+                                        <MudElement Style="color:royalblue; margin-top: -5px">
+                                            54.1%
+                                        </MudElement>
+                                    </MudText>
+                                </MudItem>
+
+                            </MudGrid>
+                        </MudItem>
+
+                        <MudItem xs="4">
+                            <MudText Style="
+                                        margin-top:10px;
+                                        margin-left:115px;
+                                      "
+                                     Typo="Typo.body2">
+                                Capital Gains
+                            </MudText>
+                            <MudGrid>
+                                <MudItem xs="4">
+                                    <MudFab Class="ml-10" Style="background-color:#4DC989; color:azure" StartIcon="@Icons.Material.Filled.Devices" />
+                                </MudItem>
+                                <MudItem xs="8">
+                                    <MudText Typo="Typo.h4"
+                                             Style="font-weight:bold;
+                                               margin-left:-10px;
+                                               color:#4DC989;
+                                               margin-top:10px">
+                                        $563
+                                    </MudText>
+                                </MudItem>
+                            </MudGrid>
+                            <MudGrid Style="
+                                        margin-bottom:10px;
+                                        margin-left:90px;
+                                      ">
+
+                                <MudItem xs="4">
+                                    <MudText Typo="Typo.body2">
+                                        Increased by
+                                    </MudText>
+                                </MudItem>
+                                <MudItem xs="1" Style="margin-left:-40px">
+                                    <MudIcon Icon="@Icons.Material.Filled.KeyboardArrowUp"
+                                             Style="color:#ECA909;">
+                                    </MudIcon>
+                                </MudItem>
+                                <MudItem xs="7">
+                                    <MudText Typo="Typo.body2">
+                                        <MudElement Style="color:#ECA909; margin-top: -5px">
+                                            54.1%
+                                        </MudElement>
+                                    </MudText>
+                                </MudItem>
+
+                            </MudGrid>
+                        </MudItem>
+                    </MudGrid>
+                    <MudDivider />
+                    <MudGrid>
+                        
+                        <MudItem xs="12" Class="mb-3 mt-3 d-flex justify-center">
+                            <MudButton Variant="Variant.Filled" Class="rounded-pill" DropShadow="false" Color="Color.Primary">View Complete Report</MudButton>
+                        </MudItem>
                     </MudGrid>
                 </MudPaper>
             </MudItem>
