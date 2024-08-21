@@ -1,0 +1,48 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<div class="ma-3">
+    <div >
+        <MudGrid>
+            <MudItem xs="8"> 
+                <MudGrid>
+                    <MudItem xs="1">
+                        <MudPaper Style="width: 60px; height: 60px;" >
+                            <MudIcon Icon="@Icons.Material.Outlined.AirplanemodeActive"  Class="ml-3 mt-3"  Color="Color.Info" Size="Size.Large" />
+                        </MudPaper>
+                    </MudItem>
+                    <MudItem xs="11" Class="">
+                        <MudText Typo="Typo.body1" Style="font-size:18px" Class="ml-5 mt-2">
+                            Analytics Dashboard
+                        </MudText>
+                        <MudText Typo="Typo.body2" Style="font-size:12px; color:gray" Class="ml-5">
+                            This is an example dashboard created using build-in elements and components.
+                        </MudText>
+                    </MudItem>
+                </MudGrid>           
+            </MudItem>
+            <MudItem xs="4">
+                <MudGrid >
+                    <MudItem xs="6" Class="d-flex justify-end">
+                        <MudPaper Style="width: 40px; height: 35px; background-color:#23272B" Class="mt-4" >
+                            <MudIconButton Icon="@Icons.Material.Filled.StarHalf" Style="color:floralwhite; margin-top:-8px; margin-left:-5px" aria-label="favourite"></MudIconButton>
+                        </MudPaper>
+                    </MudItem>
+                    <MudItem xs="6">
+                        <MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.Add" Style="font-size:12px" Color="Color.Success" Class="mt-4"  >Create New</MudButton>
+                    </MudItem>
+                </MudGrid>
+            </MudItem>
+        </MudGrid>
+        <MudGrid>
+            <MudItem xs="12">
+                <MudPaper>
+                    <MudGrid>
+
+                    </MudGrid>
+                </MudPaper>
+            </MudItem>
+        </MudGrid>
+    </div>
+</div>

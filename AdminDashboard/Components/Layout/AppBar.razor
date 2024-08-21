@@ -1,0 +1,32 @@
+﻿@inject IDialogService DialogService
+@using Elements
+<MudAppBar Elevation="1">
+
+    <MudImage Src="Image/MenuImage/logo.png" Alt="Mony the dog" Width="100" Height="50" Class="mr-15" Elevation="25" />
+    <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Primary" Edge="Edge.Start" Class="ml-5"  />
+    <MudFab Color="Color.Transparent" IconColor="Color.Primary" StartIcon="@Icons.Material.Filled.Search" Size="Size.Small" />
+    <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="@ToggleOpen">
+		@(_open? "Close" : "Open")
+	</MudButton>
+	<MudPopover Open="@_open" AnchorOrigin="Origin.BottomCenter" Class="custom-popover-position">
+		<div class="d-flex flex-column pa-1">
+			<AdminDashboard.Components.Elements.MegaMenu />
+		</div>
+	</MudPopover>
+    <MudText Typo="Typo.h5" Class="ml-3">Application</MudText>
+    <MudSpacer />
+    <MudIconButton Icon="@Icons.Material.Filled.MoreVert" Color="Color.Inherit" Edge="Edge.End" />
+</MudAppBar>
+
+@code {
+
+	public bool _open;
+
+	public void ToggleOpen()
+	{
+		if (_open)
+			_open = false;
+		else
+			_open = true;
+	}
+}

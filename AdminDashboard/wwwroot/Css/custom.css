@@ -1,0 +1,8 @@
+﻿body {
+    background-color: #F1F4F6;
+}
+.custom-popover-position {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
