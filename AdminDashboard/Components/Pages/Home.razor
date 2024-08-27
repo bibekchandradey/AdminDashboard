@@ -1,208 +1,961 @@
 ﻿@page "/"
+@using Components.Elements
 
 <PageTitle>Home</PageTitle>
 
 <div class="ma-3">
-    <div >
-        <MudGrid>
-            <MudItem xs="8"> 
+    <MudGrid>
+        <MudItem xs="8">
+            <MudGrid>
+                <MudItem xs="1">
+                    <MudPaper Style="width: 60px; height: 60px;">
+                        <MudIcon Icon="@Icons.Material.Outlined.AirplanemodeActive" Class="ml-3 mt-3" Color="Color.Info" Size="Size.Large" />
+                    </MudPaper>
+                </MudItem>
+                <MudItem xs="11" Class="">
+                    <MudText Typo="Typo.body1" Style="font-size:18px" Class="ml-5 mt-2">
+                        Analytics Dashboard
+                    </MudText>
+                    <MudText Typo="Typo.body2" Style="font-size:12px; color:gray" Class="ml-5">
+                        This is an example dashboard created using build-in elements and components.
+                    </MudText>
+                </MudItem>
+            </MudGrid>
+        </MudItem>
+        <MudItem xs="4">
+            <MudGrid>
+                <MudItem xs="6" Class="d-flex justify-end">
+                    <MudPaper Style="width: 40px; height: 35px; background-color:#23272B" Class="mt-4">
+                        <MudIconButton Icon="@Icons.Material.Filled.StarHalf" Style="color:floralwhite; margin-top:-8px; margin-left:-5px" aria-label="favourite"></MudIconButton>
+                    </MudPaper>
+                </MudItem>
+                <MudItem xs="6">
+                    <MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.Add" Style="font-size:12px" Color="Color.Success" Class="mt-4">Create New</MudButton>
+                </MudItem>
+            </MudGrid>
+        </MudItem>
+    </MudGrid>
+    <MudGrid Class="mt-15">
+        <MudItem xs="12">
+            <MudPaper>
                 <MudGrid>
-                    <MudItem xs="1">
-                        <MudPaper Style="width: 60px; height: 60px;" >
-                            <MudIcon Icon="@Icons.Material.Outlined.AirplanemodeActive"  Class="ml-3 mt-3"  Color="Color.Info" Size="Size.Large" />
-                        </MudPaper>
-                    </MudItem>
-                    <MudItem xs="11" Class="">
-                        <MudText Typo="Typo.body1" Style="font-size:18px" Class="ml-5 mt-2">
-                            Analytics Dashboard
-                        </MudText>
-                        <MudText Typo="Typo.body2" Style="font-size:12px; color:gray" Class="ml-5">
-                            This is an example dashboard created using build-in elements and components.
+                    <MudItem xs="10">
+                        <MudText Typo="Typo.h6" Style="font-size:16px" Class="ml-6">
+                            Portfolio Performance
                         </MudText>
                     </MudItem>
-                </MudGrid>           
-            </MudItem>
-            <MudItem xs="4">
-                <MudGrid >
-                    <MudItem xs="6" Class="d-flex justify-end">
-                        <MudPaper Style="width: 40px; height: 35px; background-color:#23272B" Class="mt-4" >
-                            <MudIconButton Icon="@Icons.Material.Filled.StarHalf" Style="color:floralwhite; margin-top:-8px; margin-left:-5px" aria-label="favourite"></MudIconButton>
-                        </MudPaper>
-                    </MudItem>
-                    <MudItem xs="6">
-                        <MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.Add" Style="font-size:12px" Color="Color.Success" Class="mt-4"  >Create New</MudButton>
+                    <MudItem xs="2" Class="mb-3 d-flex justify-center">
+                        <MudButton Variant="Variant.Outlined" Style="font-size:10px">View All</MudButton>
                     </MudItem>
                 </MudGrid>
-            </MudItem>
-        </MudGrid>
-        <MudGrid Class="mt-15">
-            <MudItem xs="12">
-                <MudPaper >
-                    <MudGrid>
-                        <MudItem xs="10">
-                            <MudText Typo="Typo.h6" Style="font-size:16px" Class="ml-6">
-                                Portfolio Performance
+                <MudDivider />
+                <MudGrid>
+                    <MudItem xs="4">
+                        <MudText Style="
+                                margin-top:10px;
+                                margin-left:115px;
+                              "
+                                 Typo="Typo.body2">
+                            Cash Deposits
+                        </MudText>
+                        <MudGrid>
+                            <MudItem xs="4">
+                                <MudFab Class="ml-10" Color="Color.Warning" StartIcon="@Icons.Material.Filled.Devices" />
+                            </MudItem>
+                            <MudItem xs="8">
+                                <MudText Typo="Typo.h4"
+                                         Style="font-weight:bold;
+                                       margin-left:-10px;
+                                       margin-top:10px">
+                                    1,7M
+                                </MudText>
+                            </MudItem>
+                        </MudGrid>
+                        <MudGrid Style="
+                                margin-bottom:10px;
+                                margin-left:90px;
+                              ">
+
+                            <MudItem xs="1">
+                                <MudIcon Icon="@Icons.Material.Filled.KeyboardArrowDown"
+                                         Color="Color.Error">
+                                </MudIcon>
+                            </MudItem>
+                            <MudItem xs="11">
+                                <MudText Typo="Typo.body2">
+                                    <MudElement Style="color:red; margin-top: -5px">
+                                        54.1%
+                                    </MudElement>
+                                    less earnings
+                                </MudText>
+                            </MudItem>
+
+                        </MudGrid>
+                    </MudItem>
+
+                    <MudItem xs="4">
+                        <MudText Style="
+                                margin-top:10px;
+                                margin-left:115px;
+                              "
+                                 Typo="Typo.body2">
+                            Invested Dividents
+                        </MudText>
+                        <MudGrid>
+                            <MudItem xs="4">
+                                <MudFab Class="ml-10" Color="Color.Error" StartIcon="@Icons.Material.Filled.School" />
+                            </MudItem>
+                            <MudItem xs="8">
+                                <MudText Typo="Typo.h4"
+                                         Style="font-weight:bold;
+                                       margin-left:-10px;
+                                       margin-top:10px">
+                                    9M
+                                </MudText>
+                            </MudItem>
+                        </MudGrid>
+                        <MudGrid Style="
+                                margin-bottom:10px;
+                                margin-left:90px;
+                              ">
+
+                            <MudItem xs="4">
+                                <MudText Typo="Typo.body2">
+                                    Grow Rate:
+                                </MudText>
+                            </MudItem>
+                            <MudItem xs="1" Style="margin-left:-50px">
+                                <MudIcon Icon="@Icons.Material.Filled.KeyboardArrowDown"
+                                         Color="Color.Error">
+                                </MudIcon>
+                            </MudItem>
+                            <MudItem xs="7">
+                                <MudText Typo="Typo.body2">
+                                    <MudElement Style="color:royalblue; margin-top: -5px">
+                                        54.1%
+                                    </MudElement>
+                                </MudText>
+                            </MudItem>
+
+                        </MudGrid>
+                    </MudItem>
+
+                    <MudItem xs="4">
+                        <MudText Style="
+                                margin-top:10px;
+                                margin-left:115px;
+                              "
+                                 Typo="Typo.body2">
+                            Capital Gains
+                        </MudText>
+                        <MudGrid>
+                            <MudItem xs="4">
+                                <MudFab Class="ml-10" Style="background-color:#4DC989; color:azure" StartIcon="@Icons.Material.Filled.Domain" />
+                            </MudItem>
+                            <MudItem xs="8">
+                                <MudText Typo="Typo.h4"
+                                         Style="font-weight:bold;
+                                       margin-left:-10px;
+                                       color:#4DC989;
+                                       margin-top:10px">
+                                    $563
+                                </MudText>
+                            </MudItem>
+                        </MudGrid>
+                        <MudGrid Style="
+                                margin-bottom:10px;
+                                margin-left:90px;
+                              ">
+
+                            <MudItem xs="4">
+                                <MudText Typo="Typo.body2">
+                                    Increased by
+                                </MudText>
+                            </MudItem>
+                            <MudItem xs="1" Style="margin-left:-40px">
+                                <MudIcon Icon="@Icons.Material.Filled.KeyboardArrowUp"
+                                         Style="color:#ECA909;">
+                                </MudIcon>
+                            </MudItem>
+                            <MudItem xs="7">
+                                <MudText Typo="Typo.body2">
+                                    <MudElement Style="color:#ECA909; margin-top: -5px">
+                                        54.1%
+                                    </MudElement>
+                                </MudText>
+                            </MudItem>
+
+                        </MudGrid>
+                    </MudItem>
+                </MudGrid>
+                <MudDivider />
+                <MudGrid>
+
+                    <MudItem xs="12" Class="mb-3 mt-3 d-flex justify-center">
+                        <MudButton Variant="Variant.Filled" Class="rounded-pill" DropShadow="false" Color="Color.Primary">View Complete Report</MudButton>
+                    </MudItem>
+                </MudGrid>
+            </MudPaper>
+        </MudItem>
+    </MudGrid>
+
+    @* techinical Support And Timeline Example *@
+
+    <MudGrid Class="mt-7">
+        @* techinical Support *@
+        <MudItem xs="6">
+            <MudPaper Class="pb-1">
+               @*  Header part *@
+               <MudGrid>
+                   <MudItem xs="6">
+                        <div class="d-flex">
+                            <MudIcon Icon="@Icons.Material.Outlined.CloudDownload"
+                                     Color="Color.Info"
+                                     Class="ml-5 mb-3">
+                            </MudIcon>
+
+                            <MudText Typo="Typo.body1" Style="font-weight:200;font-size:14px" Class="ml-3">
+                                Technical Support
                             </MudText>
-                        </MudItem>
-                        <MudItem xs="2" Class="mb-3 d-flex justify-center">
-                            <MudButton Variant="Variant.Outlined" Style="font-size:10px">View All</MudButton>
-                        </MudItem>
-                    </MudGrid>
-                    <MudDivider  />
-                    <MudGrid>
-                        <MudItem xs="4" >
-                            <MudText 
-                                Style="
-                                        margin-top:10px;
-                                        margin-left:115px;
-                                      " 
-                                Typo="Typo.body2" 
-                            >
-                                Cash Deposits
+                       </div>
+                   </MudItem>
+
+                    <MudItem 
+                        xs="6" 
+                        class="d-flex justify-end pt-3"
+                    >
+                        <MudIconButton 
+                            Icon="@Icons.Material.Filled.Menu" 
+                            Style="margin-top:-5px" 
+                            Color="Color.Inherit" 
+                        />
+                   </MudItem>
+                </MudGrid>@* End of Header part *@
+                <MudDivider />
+                @* Chart part *@
+                <div class="ml-5">
+                    <MudCarousel Class="d-flex justify-center "
+                                 Style="height:400px"
+                                 ShowArrows="true"
+                                 ShowBullets="true"
+                                 EnableSwipeGesture="true"
+                                 AutoCycle="false"
+                                 TData="object">
+                        <MudCarouselItem Transition="Transition.Slide">
+                            <div>
+                                <MudChart ChartType="ChartType.Line" ChartSeries="@Series" @bind-SelectedIndex="Index" XAxisLabels="@XAxisLabels" Width="90%" Height="300px" ChartOptions="@Options" />
+
+                            </div>
+                        </MudCarouselItem>
+                        <MudCarouselItem Transition="Transition.Slide" Color="@Color.Secondary">
+                            <div class="d-flex" style="height:100%">
+                                <MudIcon Class="mx-auto my-auto" Icon="@Icons.Custom.Brands.MudBlazor" Size="@Size.Large" />
+                            </div>
+                        </MudCarouselItem>
+                        <MudCarouselItem Transition="Transition.Slide">
+                            <div class="d-flex" style="height:100%">
+                                <MudIcon Class="mx-auto my-auto" Icon="@Icons.Custom.Brands.MudBlazor" Color="@Color.Primary" Size="@Size.Large" />
+                            </div>
+                        </MudCarouselItem>
+                    </MudCarousel>
+                </div>
+               
+
+                <MudText Typo="Typo.body2" Class="ml-5" Style="color:#B4B9BD;">Sales Progress</MudText>
+
+                <MudDivider Class="mt-3"/>
+
+                <MudGrid>
+                    <MudItem xs="8">
+                        <MudText 
+                            Typo="Typo.body1"
+                                 Style="font-weight:700;font-size:small; margin: 10px 0 0 20px;">
+                            Total Orders
+                        </MudText>
+
+                        <MudText Typo="Typo.body1"
+                                 Style="font-weight:400;
+                                        font-size:small; 
+                                        margin: 10px 0 10px 20px;
+                                        color:#B1B1B1">
+                            Last year expenses
+                        </MudText>
+                    </MudItem>
+                    <MudItem xs="4">
+                        <MudText Typo="Typo.h4"
+                                 Style="font-weight:800;
+                                        font-size:1.7rem; 
+                                        margin: 10px 0 10px 20px;
+                                        color:#57CC90">
+                            $ 1896
+                        </MudText>
+                    </MudItem>
+                </MudGrid>
+
+                <MudProgressLinear
+                    Color="Color.Info"
+                    Size="Size.Medium"
+                    Value="50" 
+                    Class="mx-5" 
+                    Rounded="true"
+                    Style="width:90%;"
+                 />
+
+                 <MudText Typo="Typo.h4"
+                         Style="font-weight:400;
+                                font-size:small;
+                                margin: 10px 0 30px 20px;
+                                color:#B1B1B1">
+                    YoY Growth
+                 </MudText>
+
+
+            </MudPaper>
+        </MudItem> @* techinical Support end *@
+
+        <MudItem xs="6">
+            <MudPaper >
+                <MudGrid>
+                    
+                    <MudItem xs="6">
+                        <div class="d-flex">
+                            <MudIcon Icon="@Icons.Material.Outlined.BatteryChargingFull"
+                                     Color="Color.Error"
+                                     Class="ml-5 mb-3">
+                            </MudIcon>
+
+                            <MudText Typo="Typo.body1" Style="font-weight:200;font-size:14px" Class="ml-3">
+                                Timeline Example
                             </MudText>
-                            <MudGrid>
-                                <MudItem xs="4" >
-                                    <MudFab Class="ml-10" Color="Color.Warning" StartIcon="@Icons.Material.Filled.Devices" />
-                                </MudItem>
-                                <MudItem xs="8">
-                                    <MudText
-                                        Typo="Typo.h4" 
-                                        Style="font-weight:bold;
-                                               margin-left:-10px;
-                                               margin-top:10px"
-                                    >
-                                        1,7M
-                                    </MudText>
-                                </MudItem>
-                            </MudGrid>
-                            <MudGrid Style="
-                                        margin-bottom:10px;
-                                        margin-left:90px;
-                                      ">
-                                
-                                <MudItem xs="1">
-                                    <MudIcon Icon="@Icons.Material.Filled.KeyboardArrowDown"
-                                             Color="Color.Error"
-                                            >
-                                    </MudIcon>
-                                </MudItem>
-                                <MudItem xs="11">
-                                    <MudText 
-                                             Typo="Typo.body2">
-                                        <MudElement Style="color:red; margin-top: -5px">
-                                            54.1%
-                                        </MudElement>
-                                        less earnings
-                                    </MudText>
-                                </MudItem>
-                                
-                            </MudGrid>  
-                        </MudItem>
+                        </div>
+                    </MudItem>
 
-                        <MudItem xs="4">
-                            <MudText Style="
-                                        margin-top:10px;
-                                        margin-left:115px;
-                                      "
-                                     Typo="Typo.body2">
-                                Invested Dividents
-                            </MudText>
-                            <MudGrid>
-                                <MudItem xs="4">
-                                    <MudFab Class="ml-10" Color="Color.Error" StartIcon="@Icons.Material.Filled.School" />
-                                </MudItem>
-                                <MudItem xs="8">
-                                    <MudText Typo="Typo.h4"
-                                             Style="font-weight:bold;
-                                               margin-left:-10px;
-                                               margin-top:10px">
-                                        9M
-                                    </MudText>
-                                </MudItem>
-                            </MudGrid>
-                            <MudGrid Style="
-                                        margin-bottom:10px;
-                                        margin-left:90px;
-                                      ">
+                    <MudItem xs="6"
+                         Class="d-flex justify-end pt-3">
+                        <MudIconButton Icon="@Icons.Material.Filled.Menu"
+                                       Style="margin-top:-5px"
+                                       Color="Color.Inherit" />
+                    </MudItem>
+                
+                </MudGrid>@* End of Header part *@
+                <MudDivider/>
 
-                                <MudItem xs="4">
-                                    <MudText Typo="Typo.body2">
-                                        Grow Rate:
-                                    </MudText>
-                                </MudItem>
-                                <MudItem xs="1" Style="margin-left:-50px">
-                                    <MudIcon Icon="@Icons.Material.Filled.KeyboardArrowDown"
-                                             Color="Color.Error">
-                                    </MudIcon>
-                                </MudItem>
-                                <MudItem xs="7">
-                                    <MudText Typo="Typo.body2">
-                                        <MudElement Style="color:royalblue; margin-top: -5px">
-                                            54.1%
-                                        </MudElement>
-                                    </MudText>
-                                </MudItem>
+                <MudProgressLinear Vertical="true" Color="Color.Primary" Size="Size.Small" Value="0"/>
+                <MudGrid>
+                    <MudItem Height="360px" Class="d-flex justify-center" xs="2">
+                        <MudProgressLinear Vertical="true" Color="Color.Primary" Size="Size.Small" Value="0" />
+                        <div d-flex flex-column>
+                            <MudIcon Icon="@Icons.Material.Filled.RadioButtonChecked"
+                                     Class="mt-4"
+                                     Style="margin:-14px"
+                                     Color="Color.Primary">
+                            </MudIcon>
+                            <br />
+                            <MudIcon Icon="@Icons.Material.Filled.RadioButtonChecked"
+                                     Class="mt-4"
+                                     Style="margin:-14px"
+                                     Color="Color.Secondary">
+                            </MudIcon>
+                            <br />
+                            <MudIcon Icon="@Icons.Material.Filled.RadioButtonChecked"
+                                     Class="mt-6"
+                                     Style="margin:-14px"
+                                     Color="Color.Error">
+                            </MudIcon>
+                            <br />
+                            <MudIcon Icon="@Icons.Material.Filled.RadioButtonChecked"
+                                     Class="mt-6"
+                                     Style="margin:-14px"
+                                     Color="Color.Info">
+                            </MudIcon>
+                            <br />
+                            <MudIcon Icon="@Icons.Material.Filled.RadioButtonChecked"
+                                     Class="mt-4"
+                                     Style="margin:-14px"
+                                     Color="Color.Warning">
+                            </MudIcon>
+                            <br />
+                            <MudIcon Icon="@Icons.Material.Filled.RadioButtonChecked"
+                                     Class="mt-6"
+                                     Style="margin:-14px"
+                                     Color="Color.Secondary">
+                            </MudIcon>
+                            <br />
+                            <MudIcon Icon="@Icons.Material.Filled.RadioButtonChecked"
+                                     Class="mt-6"
+                                     Style="margin:-14px"
+                                     Color="Color.Error">
+                            </MudIcon>
 
-                            </MudGrid>
-                        </MudItem>
+                            <MudIcon Icon="@Icons.Material.Filled.RadioButtonChecked"
+                                     Class="mt-6"
+                                     Style="margin:-14px"
+                                     Color="Color.Info">
+                            </MudIcon>
+                            <br />
+                            <MudIcon Icon="@Icons.Material.Filled.RadioButtonChecked"
+                                     Class="mt-6"
+                                     Style="margin:-14px"
+                                     Color="Color.Warning">
+                            </MudIcon>
 
-                        <MudItem xs="4">
-                            <MudText Style="
-                                        margin-top:10px;
-                                        margin-left:115px;
-                                      "
-                                     Typo="Typo.body2">
-                                Capital Gains
-                            </MudText>
-                            <MudGrid>
-                                <MudItem xs="4">
-                                    <MudFab Class="ml-10" Style="background-color:#4DC989; color:azure" StartIcon="@Icons.Material.Filled.Devices" />
-                                </MudItem>
-                                <MudItem xs="8">
-                                    <MudText Typo="Typo.h4"
-                                             Style="font-weight:bold;
-                                               margin-left:-10px;
-                                               color:#4DC989;
-                                               margin-top:10px">
-                                        $563
-                                    </MudText>
-                                </MudItem>
-                            </MudGrid>
-                            <MudGrid Style="
-                                        margin-bottom:10px;
-                                        margin-left:90px;
-                                      ">
+                            <br />
+                            <MudIcon Icon="@Icons.Material.Filled.RadioButtonChecked"
+                                     Class="mt-4"
+                                     Style="margin:-14px"
+                                     Color="Color.Primary">
+                            </MudIcon>
+                            <br />
+                            <MudIcon Icon="@Icons.Material.Filled.RadioButtonChecked"
+                                     Class="mt-6"
+                                     Style="margin:-14px"
+                                     Color="Color.Error">
+                            </MudIcon>
+                            <br />
+                            <MudIcon Icon="@Icons.Material.Filled.RadioButtonChecked"
+                                     Class="mt-6"
+                                     Style="margin:-14px"
+                                     Color="Color.Secondary">
+                            </MudIcon>
 
-                                <MudItem xs="4">
-                                    <MudText Typo="Typo.body2">
-                                        Increased by
-                                    </MudText>
-                                </MudItem>
-                                <MudItem xs="1" Style="margin-left:-40px">
-                                    <MudIcon Icon="@Icons.Material.Filled.KeyboardArrowUp"
-                                             Style="color:#ECA909;">
-                                    </MudIcon>
-                                </MudItem>
-                                <MudItem xs="7">
-                                    <MudText Typo="Typo.body2">
-                                        <MudElement Style="color:#ECA909; margin-top: -5px">
-                                            54.1%
-                                        </MudElement>
-                                    </MudText>
-                                </MudItem>
-
-                            </MudGrid>
-                        </MudItem>
-                    </MudGrid>
-                    <MudDivider />
-                    <MudGrid>
+                            
+                        </div>
                         
-                        <MudItem xs="12" Class="mb-3 mt-3 d-flex justify-center">
-                            <MudButton Variant="Variant.Filled" Class="rounded-pill" DropShadow="false" Color="Color.Primary">View Complete Report</MudButton>
+                    </MudItem>
+                    <MudItem xs="10" Class="pl-0">
+                        <MudText Typo="Typo.body1" Style="font-weight:400;font-size:14px; margin:20px 0  10px 0" >
+                            All Hands Meeting
+                        </MudText>
+                        <MudText Typo="Typo.body1" Style="font-weight:300;font-size:12px; margin:0 0  10px 0">
+                            Yet another one, at 15:00 PM
+                        </MudText>
+                        <MudText Typo="Typo.body1" Style="font-weight:400;font-size:14px; margin:20px 0  10px 0">
+                            Build the production release
+                        </MudText>
+                        <MudText Typo="Typo.body1" Style="font-weight:400;font-size:14px; margin:20px 0  10px 0">
+                            Something not important
+                        </MudText>
+                        <MudText Typo="Typo.body1" Style="font-weight:300;font-size:12px; margin:0 0  10px 0">
+                            Yet another one, at 15:00 PM
+                        </MudText>
+                        <MudText Typo="Typo.body1" Style="font-weight:400;font-size:14px; margin:20px 0  10px 0">
+                            This dot has an info state
+                        </MudText>
+                        <MudText Typo="Typo.body1" Style="font-weight:400;font-size:14px; margin:20px 0  10px 0">
+                            This dot has a dark state
+                        </MudText>
+                        <MudText Typo="Typo.body1" Style="font-weight:400;font-size:14px; margin:20px 0  10px 0">
+                            All Hands Meeting
+                        </MudText>
+                        <MudText Typo="Typo.body1" Style="font-weight:300;font-size:12px; margin:0 0  10px 0">
+                            Yet another one, at 15:00 PM
+                        </MudText>
+                        <MudText Typo="Typo.body1" Style="font-weight:400;font-size:14px; margin:20px 0  10px 0">
+                            Build the production release
+                        </MudText>
+                        <MudText Typo="Typo.body1" Style="font-weight:400;font-size:14px; margin:20px 0  10px 0">
+                            Something not important
+                        </MudText>
+                    </MudItem>
+                </MudGrid>
+                
+            </MudPaper>
+        </MudItem>
+    </MudGrid>@*End techinical Support And Timeline Example *@
+    @* Chart cards *@
+    <MudGrid>
+        <MudItem xs="3">
+            <MudCard Class="my-5">
+                <MudItem Class="pt-2 pl-2 pr-2">
+                    <MudCardContent>
+                        <MudText Class="d-flex" Style="font-size:2rem">
+                            <MudItem Style="font-size:1.5rem;
+                                            margin: 0.4rem 0 0 0;
+                                            color:#BABABA">
+                                $
+                            </MudItem> 874
+                        </MudText>
+                        <MudText Typo="Typo.body2" Style="font-size:1rem; color:#BABABA">
+                            sales last month
+                        </MudText>
+                        <MudChart ChartType="ChartType.Line"  ChartSeries="@Series" @bind-SelectedIndex="Index" Width="100%" Height="100px" ChartOptions="@Options">
+                            
+                        </MudChart>
+
+                    </MudCardContent>
+                </MudItem>
+                <MudProgressLinear Color="Color.Info" Size="Size.Small" Value="100" Rounded="true" />
+            </MudCard>
+        </MudItem>
+
+        <MudItem xs="3">
+            <MudCard Class="my-5">
+                <MudItem Class="pt-2 pl-2 pr-2">
+                    <MudCardContent>
+                        <MudText Class="d-flex" Style="font-size:2rem">
+                            <MudItem Style="font-size:1.5rem;
+                                            margin: 0.4rem 0 0 0;
+                                            color:#BABABA">
+                                $
+                            </MudItem> 1283
+                        </MudText>
+                        <MudText Typo="Typo.body2" Style="font-size:1rem; color:#BABABA">
+                            sales Income
+                        </MudText>
+                        <MudChart ChartType="ChartType.Line"  ChartSeries="@Series" @bind-SelectedIndex="Index" Width="100%" Height="100px" ChartOptions="@Options">
+
+                        </MudChart>
+
+                    </MudCardContent>
+                </MudItem>
+                <MudProgressLinear Color="Color.Info" Size="Size.Small" Value="100" Rounded="true" />
+            </MudCard>
+        </MudItem>
+
+        <MudItem xs="3">
+            <MudCard Class="my-5">
+                <MudItem Class="pt-2 pl-2 pr-2">
+                    <MudCardContent>
+                        <MudText Class="d-flex" Style="font-size:2rem">
+                            <MudItem Style="font-size:1.5rem;
+                                            margin: 0.4rem 0 0 0;
+                                            color:#BABABA">
+                                $
+                            </MudItem> 1286
+                        </MudText>
+                        <MudText Typo="Typo.body2" Style="font-size:1rem; color:#BABABA">
+                            last month sales
+                        </MudText>
+                        <MudChart ChartType="ChartType.Line" ChartSeries="@Series" @bind-SelectedIndex="Index" Width="100%" Height="100px" ChartOptions="@Options">
+
+                        </MudChart>
+
+                    </MudCardContent>
+                </MudItem>
+                <MudProgressLinear Color="Color.Info" Size="Size.Small" Value="100" Rounded="true" />
+            </MudCard>
+        </MudItem>
+
+        <MudItem xs="3">
+            <MudCard Class="my-5">
+                <MudItem Class="pt-2 pl-2 pr-2">
+                    <MudCardContent>
+                        <MudText Class="d-flex" Style="font-size:2rem">
+                            <MudItem Style="font-size:1.5rem;
+                                            margin: 0.4rem 0 0 0;
+                                            color:#BABABA">
+                                $
+                            </MudItem> 564
+                        </MudText>
+                        <MudText Typo="Typo.body2" Style="font-size:1rem; color:#BABABA">
+                            total revenue
+                        </MudText>
+                        <MudChart ChartType="ChartType.Line" ChartSeries="@Series" @bind-SelectedIndex="Index" Width="100%" Height="100px" ChartOptions="@Options">
+
+                        </MudChart>
+
+                    </MudCardContent>
+                </MudItem>
+                <MudProgressLinear Color="Color.Info" Size="Size.Small" Value="100" Rounded="true" />
+            </MudCard>
+        </MudItem>
+    </MudGrid>
+    @*End Chart cards *@
+
+    @* Dynamic Table *@
+    <MudCard>
+        <MudCardContent>
+            <div class="d-flex mb-3">
+                <MudIcon Icon="@Icons.Material.Outlined.Devices" Style="color:#BBBFC3; margin-right:1rem"></MudIcon>
+                <MudText 
+                    Typo="Typo.body1"
+                        >
+                Easy Dynamic Tables</MudText>
+            </div>
+            <MudDivider></MudDivider>
+            <MudSimpleTable Dense="true" Hover="true" Bordered="true" Striped="true" Style="overflow-x: auto; margin:1rem">
+                <thead>
+                    <tr>
+                        @foreach (var h in headings)
+                        {
+                            <th>@h</th>
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var row in rows)
+                    {
+                        <tr>
+                            @foreach (var x in row.Split())
+                            {
+                                <td>@x</td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </MudSimpleTable>
+        </MudCardContent>
+    </MudCard>@*End Dynamic Table *@
+
+    <MudGrid>
+        <MudItem xs="6">
+            <MudPaper Class="mt-5 py-2">
+               
+                    <MudGrid Class="pa-5">
+                        <MudItem xs="6">
+                            <div class="d-flex flex-grow-1 ">
+                                <MudIcon Icon="@Icons.Material.Outlined.AddTask"
+                                         Style="color:#89D4FF; margin-right:1rem"></MudIcon>
+                                <MudText Typo="Typo.body1">
+                                    Tasks List
+                                </MudText>
+                            </div>
+                        </MudItem>
+                        <MudItem xs="6" Class="d-flex justify-end">
+                            <MudIcon Icon="@Icons.Material.Outlined.Apps" Class="gap-10"></MudIcon>
                         </MudItem>
                     </MudGrid>
-                </MudPaper>
-            </MudItem>
-        </MudGrid>
-    </div>
+
+                <div style="height:300px; overflow: scroll;">
+
+                    <div>
+                        <MudDivider Class="mb-5"></MudDivider>
+
+                        <MudGrid Class="px-5">
+                            <div class="d-flex">
+
+                                <MudProgressLinear class="ml-5 mt-2" Style="height:80%" Vertical="true" Rounded="true" Color="Color.Primary" Size="Size.Small" Value="100" />
+
+                                <MudCheckBox Class="mt-3" Size="Size.Small" @bind-Value="example"></MudCheckBox>
+
+                                <div>
+                                    <MudText Style="margin-top:1.3rem;font-size:12px; font-weight:700">Wash the car </MudText>
+                                    <MudText Style="font-style:italic;font-size:12px; font-weight:300">Written by Bob</MudText>
+                                </div>
+
+                                <MudChip Text="pink"
+                                         Color="Color.Secondary"
+                                         Dense="true"
+                                         Style="font-size:10px; font-weight:300;border-radius:5px; padding:2px;margin-top:10px"
+                                         Value="@Color.Secondary">Secondary</MudChip>
+                            </div>
+
+                        </MudGrid>
+
+                        <MudDivider Class="mb-5"></MudDivider>
+
+                        <MudGrid Class="px-5">
+                            <div class="d-flex">
+
+                                <MudProgressLinear class="ml-5 mt-2" Style="height:80%" Vertical="true" Rounded="true" Color="Color.Primary" Size="Size.Small" Value="100" />
+
+                                <MudCheckBox Class="mt-3" Size="Size.Small" @bind-Value="example"></MudCheckBox>
+
+                                <div>
+                                    <MudText Style="margin-top:1.3rem;font-size:12px; font-weight:700">Wash the car </MudText>
+                                    <MudText Style="font-style:italic;font-size:12px; font-weight:300">Written by Bob</MudText>
+                                </div>
+
+                                <MudChip Text="pink"
+                                         Color="Color.Secondary"
+                                         Dense="true"
+                                         Style="font-size:10px; font-weight:300;border-radius:5px; padding:2px;margin-top:10px"
+                                         Value="@Color.Secondary">Secondary</MudChip>
+                            </div>
+
+                        </MudGrid>
+
+                        <MudDivider Class="mb-5"></MudDivider>
+
+                        <MudGrid Class="px-5">
+                            <div class="d-flex">
+
+                                <MudProgressLinear class="ml-5 mt-2" Style="height:80%" Vertical="true" Rounded="true" Color="Color.Primary" Size="Size.Small" Value="100" />
+
+                                <MudCheckBox Class="mt-3" Size="Size.Small" @bind-Value="example"></MudCheckBox>
+
+                                <div>
+                                    <MudText Style="margin-top:1.3rem;font-size:12px; font-weight:700">Wash the car </MudText>
+                                    <MudText Style="font-style:italic;font-size:12px; font-weight:300">Written by Bob</MudText>
+                                </div>
+
+                                <MudChip Text="pink"
+                                         Color="Color.Secondary"
+                                         Dense="true"
+                                         Style="font-size:10px; font-weight:300;border-radius:5px; padding:2px;margin-top:10px"
+                                         Value="@Color.Secondary">Secondary</MudChip>
+                            </div>
+
+                        </MudGrid>
+
+                        <MudDivider Class="mb-5"></MudDivider>
+
+                        <MudGrid Class="px-5">
+                            <div class="d-flex">
+
+                                <MudProgressLinear class="ml-5 mt-2" Style="height:80%" Vertical="true" Rounded="true" Color="Color.Primary" Size="Size.Small" Value="100" />
+
+                                <MudCheckBox Class="mt-3" Size="Size.Small" @bind-Value="example"></MudCheckBox>
+
+                                <div>
+                                    <MudText Style="margin-top:1.3rem;font-size:12px; font-weight:700">Wash the car </MudText>
+                                    <MudText Style="font-style:italic;font-size:12px; font-weight:300">Written by Bob</MudText>
+                                </div>
+
+                                <MudChip Text="pink"
+                                         Color="Color.Secondary"
+                                         Dense="true"
+                                         Style="font-size:10px; font-weight:300;border-radius:5px; padding:2px;margin-top:10px"
+                                         Value="@Color.Secondary">Secondary</MudChip>
+                            </div>
+                        </MudGrid>
+
+                        <MudDivider Class="mb-5"></MudDivider>
+
+                        <MudGrid Class="px-5">
+                            <div class="d-flex">
+
+                                <MudProgressLinear class="ml-5 mt-2" Style="height:80%" Vertical="true" Rounded="true" Color="Color.Primary" Size="Size.Small" Value="100" />
+
+                                <MudCheckBox Class="mt-3" Size="Size.Small" @bind-Value="example"></MudCheckBox>
+
+                                <div>
+                                    <MudText Style="margin-top:1.3rem;font-size:12px; font-weight:700">Wash the car </MudText>
+                                    <MudText Style="font-style:italic;font-size:12px; font-weight:300">Written by Bob</MudText>
+                                </div>
+
+                                <MudChip Text="pink"
+                                         Color="Color.Secondary"
+                                         Dense="true"
+                                         Style="font-size:10px; font-weight:300;border-radius:5px; padding:2px;margin-top:10px"
+                                         Value="@Color.Secondary">Secondary</MudChip>
+                            </div>
+
+                        </MudGrid>
+
+                        <MudDivider Class="mb-5"></MudDivider>
+
+                        <MudGrid Class="px-5">
+                            <div class="d-flex">
+
+                                <MudProgressLinear class="ml-5 mt-2" Style="height:80%" Vertical="true" Rounded="true" Color="Color.Primary" Size="Size.Small" Value="100" />
+
+                                <MudCheckBox Class="mt-3" Size="Size.Small" @bind-Value="example"></MudCheckBox>
+
+                                <div>
+                                    <MudText Style="margin-top:1.3rem;font-size:12px; font-weight:700">Wash the car </MudText>
+                                    <MudText Style="font-style:italic;font-size:12px; font-weight:300">Written by Bob</MudText>
+                                </div>
+
+                                <MudChip Text="pink"
+                                         Color="Color.Secondary"
+                                         Dense="true"
+                                         Style="font-size:10px; font-weight:300;border-radius:5px; padding:2px;margin-top:10px"
+                                         Value="@Color.Secondary">Secondary</MudChip>
+                            </div>
+
+                        </MudGrid>
+
+                        <MudDivider Class="mb-5"></MudDivider>
+                    </div>
+                   
+               </div>
+                <div class="d-flex justify-end">
+                    <MudLink Class="mt-2" Style="font-size:12px" Href="#">Default</MudLink>
+                    <MudButton 
+                        Class="ml-5 mr-2" 
+                        Style="font-size:12px" 
+                        Variant="Variant.Filled" 
+
+                        Color="Color.Primary">Add Task</MudButton>
+                </div>
+            </MudPaper>
+ 
+        </MudItem>
+        <MudItem xs="6">
+            <MudPaper Class="mt-5 py-2">
+                <MudGrid Class="pa-5">
+                    <MudItem xs="6">
+                        <div class="d-flex flex-grow-1 ">
+                            <MudIcon Icon="@Icons.Material.Outlined.Print"
+                                     Style="color:#F36FA5; margin-right:1rem"></MudIcon>
+                            <MudText Typo="Typo.body1">
+                                Chat Box
+                            </MudText>
+
+
+                        </div>
+                    </MudItem>
+                    <MudItem xs="6" Class="d-flex justify-end">
+                        <MudIcon Icon="@Icons.Material.Outlined.Apps" Class="gap-10"></MudIcon>
+                    </MudItem>
+                </MudGrid>
+
+                <MudDivider Class="mb-5"></MudDivider>
+
+                <MudGrid Class="px-5">
+                    <MudIcon Color="Color.Primary" Icon="@Icons.Material.Outlined.LastPage" Style="font-size:4.5rem; "></MudIcon>
+
+                    <MudCheckBox Class="mt-3" @bind-Value="example"></MudCheckBox>
+
+                    <div>
+                        <MudText Style="margin-top:1.3rem;font-size:12px; font-weight:700">Wash the car </MudText>
+                        <MudText Style="font-style:italic;font-size:12px; font-weight:300">Written by Bob</MudText>
+                    </div>
+
+                    <MudChip Text="pink"
+                             Color="Color.Secondary"
+                             Style="font-size:10px; font-weight:300;border-radius:5px; padding:2px;margin-top:10px"
+                             Value="@Color.Secondary">Secondary</MudChip>
+
+                </MudGrid>
+
+                <MudDivider Class="mb-5"></MudDivider>
+
+                <MudGrid Class="px-5">
+                    <MudIcon Color="Color.Primary" Icon="@Icons.Material.Outlined.LastPage" Style="font-size:4.5rem; "></MudIcon>
+
+                    <MudCheckBox Class="mt-3" @bind-Value="example"></MudCheckBox>
+
+                    <div>
+                        <MudText Style="margin-top:1.3rem;font-size:12px; font-weight:700">Wash the car </MudText>
+                        <MudText Style="font-style:italic;font-size:12px; font-weight:300">Written by Bob</MudText>
+                    </div>
+
+                    <MudChip Text="pink"
+                             Color="Color.Secondary"
+                             Style="font-size:10px; font-weight:300;border-radius:5px; padding:2px;margin-top:10px"
+                             Value="@Color.Secondary">Secondary</MudChip>
+
+                </MudGrid>
+
+                <MudDivider Class="mb-5"></MudDivider>
+
+                <MudGrid Class="px-5">
+                    <MudIcon Color="Color.Primary" Icon="@Icons.Material.Outlined.LastPage" Style="font-size:4.5rem; "></MudIcon>
+
+                    <MudCheckBox Class="mt-3" @bind-Value="example"></MudCheckBox>
+
+                    <div>
+                        <MudText Style="margin-top:1.3rem;font-size:12px; font-weight:700">Wash the car </MudText>
+                        <MudText Style="font-style:italic;font-size:12px; font-weight:300">Written by Bob</MudText>
+                    </div>
+
+                    <MudChip Text="pink"
+                             Color="Color.Secondary"
+                             Style="font-size:10px; font-weight:300;border-radius:5px; padding:2px;margin-top:10px"
+                             Value="@Color.Secondary">Secondary</MudChip>
+
+                </MudGrid>
+
+                <MudDivider Class="mb-5"></MudDivider>
+
+                <MudGrid Class="px-5">
+                    <MudIcon Color="Color.Primary" Icon="@Icons.Material.Outlined.LastPage" Style="font-size:4.5rem; "></MudIcon>
+
+                    <MudCheckBox Class="mt-3" @bind-Value="example"></MudCheckBox>
+
+                    <div>
+                        <MudText Style="margin-top:1.3rem;font-size:12px; font-weight:700">Wash the car </MudText>
+                        <MudText Style="font-style:italic;font-size:12px; font-weight:300">Written by Bob</MudText>
+                    </div>
+
+                    <MudChip Text="pink"
+                             Color="Color.Secondary"
+                             Style="font-size:10px; font-weight:300;border-radius:5px; padding:2px;margin-top:10px"
+                             Value="@Color.Secondary">Secondary</MudChip>
+
+                </MudGrid>
+
+                <MudDivider Class="mb-5"></MudDivider>
+
+                <MudGrid Class="px-5">
+                    <MudIcon Color="Color.Primary" Icon="@Icons.Material.Outlined.LastPage" Style="font-size:4.5rem; "></MudIcon>
+
+                    <MudCheckBox Class="mt-3" @bind-Value="example"></MudCheckBox>
+
+                    <div>
+                        <MudText Style="margin-top:1.3rem;font-size:12px; font-weight:700">Wash the car </MudText>
+                        <MudText Style="font-style:italic;font-size:12px; font-weight:300">Written by Bob</MudText>
+                    </div>
+
+                    <MudChip Text="pink"
+                             Color="Color.Secondary"
+                             Style="font-size:10px; font-weight:300;border-radius:5px; padding:2px;margin-top:10px"
+                             Value="@Color.Secondary">Secondary</MudChip>
+
+                </MudGrid>
+
+                <MudDivider Class="mb-5"></MudDivider>
+
+                <MudGrid Class="px-5">
+                    <div class="d-flex">
+                        
+                        <MudProgressLinear class="ml-5 mt-2" Style="height:80%" Vertical="true" Rounded="true" Color="Color.Primary" Size="Size.Small" Value="100" />
+
+                        <MudCheckBox Class="mt-3" Size="Size.Small"  @bind-Value="example"></MudCheckBox>
+
+                        <div>
+                            <MudText Style="margin-top:1.3rem;font-size:12px; font-weight:700">Wash the car </MudText>
+                            <MudText Style="font-style:italic;font-size:12px; font-weight:300">Written by Bob</MudText>
+                        </div>
+
+                        <MudChip Text="pink"
+                                 Color="Color.Secondary"
+                                 Dense="true"
+                                 Style="font-size:10px; font-weight:300;border-radius:5px; padding:2px;margin-top:10px"
+                                 Value="@Color.Secondary">Secondary</MudChip>
+                    </div>
+                </MudGrid>
+
+                <MudDivider Class="mb-5"></MudDivider>
+
+
+            </MudPaper>
+        </MudItem>
+    </MudGrid>
+
+    <MudGrid Class="mt-5">
+        <MudItem xs="12" >
+            <MudPaper>
+                <MudGrid>
+                    <MudItem xs="4" Class="d-flex justify-space-between ma-2">
+                        <div>
+                            <MudText>Total Orders</MudText>
+                            <MudText>Last year expenses</MudText>
+                        </div>
+                        <div>
+                            <MudText>1896</MudText>
+                        </div>
+                    </MudItem>
+                    <MudItem xs="4"></MudItem>
+                    <MudItem xs="4"></MudItem>
+                </MudGrid>
+            </MudPaper>
+        </MudItem>
+    </MudGrid>
+
 </div>
+
+@code{
+    private bool example;
+    private int Index = -1; //default value cannot be 0 -> first selectedindex is 0.
+    public ChartOptions Options = new ChartOptions();
+
+
+    public List<ChartSeries> Series = new List<ChartSeries>()
+    {
+        new ChartSeries() {  Data = new double[] { 90, 79, 72, 69, 62, 62, 55, 65, 70 } },
+        
+    };
+    public string[] XAxisLabels = { "", "", "", "", "", "", "", "", "" };
+
+    string[] headings = { "Last Name", "First Name", "Person age" };
+    string[] rows = {
+        @"Macdonald	Dickerson	40",
+        @"Shaw	Larsen	21",
+        @"Wilson	Geneva	89",
+        @"Carney	Jami	38",
+        
+    };
+}
