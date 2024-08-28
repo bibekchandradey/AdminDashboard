@@ -28,7 +28,7 @@
 }
 
 /* Medium devices (landscape tablets, 768px and down) */
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 12px) {
     .top-hero-icon {
         display: none;
         

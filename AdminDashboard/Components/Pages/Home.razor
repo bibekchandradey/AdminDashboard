@@ -4,40 +4,78 @@
 <PageTitle>Home</PageTitle>
 
 <div class="ma-3">
+    @* top hero part *@
     <MudGrid>
-        <MudItem lg="8" md="12" >
+        <MudItem lg="8" md="12">
             <MudGrid>
-                <MudItem lg="1" md="0" >
-                    <MudPaper Class="top-hero-icon" >
-                        <MudIcon Icon="@Icons.Material.Outlined.AirplanemodeActive" 
-                        Class="ml-3 mt-3" 
-                        Color="Color.Info" 
-                        Size="Size.Large" />
-                    </MudPaper>
+                <MudItem lg="1">
+                    <MudHidden Breakpoint="Breakpoint.LgAndUp" Invert="true">
+                        <MudPaper Style="width: 60px;height: 60px;">
+                            <MudIcon Icon="@Icons.Material.Outlined.AirplanemodeActive"
+                                     Class="ml-3 mt-3"
+                                     Color="Color.Info"
+                                     Size="Size.Large" />
+                        </MudPaper>
+                    </MudHidden>
+                    
                 </MudItem>
                 <MudItem lg="11" md="12" Class="top-icon-mid-item">
-                    <MudText Typo="Typo.body1" Style="font-size:18px" Class="ml-5 mt-2 d-flex">
-                        Analytics Dashboard
-                    </MudText>
-                    <MudText Typo="Typo.body2" Style="font-size:12px; color:gray" Class="ml-5 ">
-                        This is an example dashboard created using build-in elements and components.
-                    </MudText>
+
+                    <MudHidden Breakpoint="Breakpoint.LgAndUp" Invert="true">
+                            <MudText Typo="Typo.body1" Style="font-size:18px" Class="ml-5 mt-2 text-center">
+                                Analytics Dashboard
+                            </MudText>
+                            <MudText Typo="Typo.body2" Style="font-size:12px; color:gray" Class="ml-5 text-center">
+                                This is an example dashboard created using built-in elements and components.
+                            </MudText>
+                    </MudHidden>
+                   
                 </MudItem>
             </MudGrid>
         </MudItem>
-        <MudItem lg="4" md="12" >
-            <MudGrid>
-                <MudItem lg="6" Class="d-flex justify-end top-icon-mid-item" >
-                    <MudPaper Style="width: 40px; height: 35px; background-color:#23272B" Class="mt-4">
-                        <MudIconButton Icon="@Icons.Material.Filled.StarHalf" Style="color:floralwhite; margin-top:-8px; margin-left:-5px" aria-label="favourite"></MudIconButton>
-                    </MudPaper>
-                </MudItem>
-                <MudItem lg="6">
-                    <MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.Add" Style="font-size:12px" Color="Color.Success" Class="mt-4">Create New</MudButton>
-                </MudItem>
-            </MudGrid>
+        <MudItem lg="4" md="12">
+
+            <MudHidden Breakpoint="Breakpoint.LgAndUp" Invert="true">
+                <MudGrid>
+                    <MudItem lg="6" Class="d-flex justify-end top-icon-mid-item">
+                        <MudPaper Style="width: 40px; height: 35px; background-color:#23272B" Class="mt-4">
+                            <MudIconButton Icon="@Icons.Material.Filled.StarHalf" Style="color:floralwhite; margin-top:-8px; margin-left:-5px" aria-label="favourite"></MudIconButton>
+                        </MudPaper>
+                    </MudItem>
+                    <MudItem lg="6">
+                        <MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.Add" Style="font-size:12px" Color="Color.Success" Class="mt-4">Create New</MudButton>
+                    </MudItem>
+                </MudGrid>
+            </MudHidden> 
         </MudItem>
     </MudGrid>
+    @*End of top hero part *@
+    <MudHidden Breakpoint="Breakpoint.LgAndUp"  >
+    
+                <MudGrid Justify="Justify.Center" AlignItems="AlignItems.Center">
+                    <div>
+                        <MudText Typo="Typo.body1" Style="font-size:18px; text-align:center;">
+                            Analytics Dashboard
+                        </MudText>
+                        <MudText Typo="Typo.body2" Style="font-size:12px; color:gray; text-align:center;">
+                            This is an example dashboard created using built-in elements and components.
+                        </MudText>
+                    </div>
+                    <MudGrid Justify="Justify.Center" AlignItems="AlignItems.Center">
+                        <MudItem lg="6" >
+                            <MudPaper Style="width: 40px; height: 35px; background-color:#23272B" Class="mt-4">
+                                <MudIconButton Icon="@Icons.Material.Filled.StarHalf" Style="color:floralwhite; margin-top:-8px; margin-left:-5px" aria-label="favourite"></MudIconButton>
+                            </MudPaper>
+                        </MudItem>
+                        <MudItem lg="6">
+                            <MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.Add" Style="font-size:12px" Color="Color.Success" Class="mt-4">Create New</MudButton>
+                        </MudItem>
+                    </MudGrid>
+                </MudGrid>
+            </MudHidden>
+           
+        
+
     <MudGrid Class="mt-15">
         <MudItem lg="12">
             <MudPaper>
