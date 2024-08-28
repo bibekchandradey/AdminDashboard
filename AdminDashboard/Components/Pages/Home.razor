@@ -5,28 +5,29 @@
 
 <div class="ma-3">
     <MudGrid>
-        <MudItem lg="8" md="12">
+        <MudItem lg="8" md="12" >
             <MudGrid>
                 <MudItem lg="1" md="0" >
-                    <MudHidden Breakpoint="Breakpoint.Md" Invert="true">
-                        <MudPaper Style="width: 60px; height: 60px;">
-                            <MudIcon Icon="@Icons.Material.Outlined.AirplanemodeActive" Class="ml-3 mt-3" Color="Color.Info" Size="Size.Large" />
-                        </MudPaper>
-                    </MudHidden>
+                    <MudPaper Class="top-hero-icon" >
+                        <MudIcon Icon="@Icons.Material.Outlined.AirplanemodeActive" 
+                        Class="ml-3 mt-3" 
+                        Color="Color.Info" 
+                        Size="Size.Large" />
+                    </MudPaper>
                 </MudItem>
-                <MudItem lg="11" md="12" Class="">
-                    <MudText Typo="Typo.body1" Style="font-size:18px" Class="ml-5 mt-2">
+                <MudItem lg="11" md="12" Class="top-icon-mid-item">
+                    <MudText Typo="Typo.body1" Style="font-size:18px" Class="ml-5 mt-2 d-flex">
                         Analytics Dashboard
                     </MudText>
-                    <MudText Typo="Typo.body2" Style="font-size:12px; color:gray" Class="ml-5">
+                    <MudText Typo="Typo.body2" Style="font-size:12px; color:gray" Class="ml-5 ">
                         This is an example dashboard created using build-in elements and components.
                     </MudText>
                 </MudItem>
             </MudGrid>
         </MudItem>
-        <MudItem lg="4" md="12">
+        <MudItem lg="4" md="12" >
             <MudGrid>
-                <MudItem lg="6" Class="d-flex justify-end">
+                <MudItem lg="6" Class="d-flex justify-end top-icon-mid-item" >
                     <MudPaper Style="width: 40px; height: 35px; background-color:#23272B" Class="mt-4">
                         <MudIconButton Icon="@Icons.Material.Filled.StarHalf" Style="color:floralwhite; margin-top:-8px; margin-left:-5px" aria-label="favourite"></MudIconButton>
                     </MudPaper>
