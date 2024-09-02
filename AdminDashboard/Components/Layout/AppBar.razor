@@ -5,14 +5,86 @@
     <MudImage Src="Image/MenuImage/logo.png" Alt="Mony the dog" Width="100" Height="50" Class="mr-15" Elevation="25" />
     <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Primary" Edge="Edge.Start" Class="ml-5"  />
     <MudFab Color="Color.Transparent" IconColor="Color.Primary" StartIcon="@Icons.Material.Filled.Search" Size="Size.Small" />
-    <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="@ToggleOpen">
-		@(_open? "Close" : "Open")
-	</MudButton>
-	<MudPopover Open="@_open" AnchorOrigin="Origin.BottomCenter" Class="custom-popover-position">
-		<div class="d-flex flex-column pa-1">
-			<AdminDashboard.Components.Elements.MegaMenu />
-		</div>
-	</MudPopover>
+    
+    <MudMenu AnchorOrigin="Origin.BottomCenter" TransformOrigin="Origin.TopLeft" Class="ml-4" Dense>
+        <ActivatorContent >
+            <MudIcon Style="font-size:0.99rem;margin:2px 5px 0 3px;color:#6c757d" Icon="@Icons.Material.Outlined.CardGiftcard"></MudIcon>
+            <MudText Style="font-size:0.85rem;color:#6c757d">Mega Menu</MudText>
+            <MudIcon Icon="@Icons.Material.Filled.KeyboardArrowDown"
+                     Style="color:#6C757D;font-size:0.95rem;margin:3px 0px 0 0px;color:#6c757d">
+            </MudIcon>
+        </ActivatorContent>
+        <ChildContent>
+            <MudMenuItem Elavate="1">
+                <div style="width:780px; padding:5px;margin:0px">
+                    <MudGrid>
+                        <MudItem lg="4">
+                            <MudText Style="font-size:0.85rem;color:#6c757d">OverVier</MudText>
+                            <div class="d-flex">
+                                <MudIconButton Href="#"
+                                Size="Size.Small"
+                                               Icon="@Icons.Material.Outlined.AccountBalanceWallet"
+                                               aria-label="delete" Style="font-size:0.85rem;"
+                                               
+                                >
+                                </MudIconButton>
+                                <MudText Class="mt-1" Style="font-size:0.85rem;">
+                                    Contacts
+                                </MudText>
+                            </div>
+                            
+                            <MudText>OverVier</MudText>
+                            <MudText>OverVier</MudText>
+                            <MudText>OverVier</MudText>
+                        </MudItem>
+                        
+                        <MudItem lg="4">
+                            <MudText>Hi</MudText>
+                        </MudItem>
+                        
+                        <MudItem lg="4">
+                            <MudText>Hi</MudText>
+                        </MudItem>
+                        
+                    </MudGrid>
+                    
+                </div>
+            </MudMenuItem>
+           
+        </ChildContent>
+    </MudMenu>
+
+    <MudMenu AnchorOrigin="Origin.BottomCenter" TransformOrigin="Origin.TopLeft" Class="ml-4" Dense>
+        <ActivatorContent>
+            <MudAvatar Color="Color.Secondary" Class="mr-3" Size="Size.Small">4</MudAvatar>
+            <MudText Style="font-size:0.85rem;color:#6c757d">Settings</MudText>
+            <MudIcon Icon="@Icons.Material.Filled.KeyboardArrowDown"
+                     Style="color:#6C757D;font-size:0.95rem;margin:3px 0px 0 0px;color:#6c757d">
+            </MudIcon>
+        </ActivatorContent>
+        <ChildContent>
+            <MudMenuItem>Profile</MudMenuItem>
+            <MudMenuItem>Theme</MudMenuItem>
+            <MudMenuItem>Usage</MudMenuItem>
+            <MudMenuItem>Sign Out</MudMenuItem>
+        </ChildContent>
+    </MudMenu>
+
+    <MudMenu AnchorOrigin="Origin.BottomCenter" TransformOrigin="Origin.TopLeft" Class="ml-4" Dense>
+        <ActivatorContent>
+            <MudIcon Style="font-size:0.99rem;margin:2px 5px 0 3px;color:#6c757d" Icon="@Icons.Material.Outlined.WbSunny"></MudIcon>
+            <MudText Style="font-size:0.85rem;color:#6c757d">Projects </MudText>
+            <MudIcon Icon="@Icons.Material.Filled.KeyboardArrowDown"
+                     Style="color:#6C757D;font-size:0.95rem;margin:3px 0px 0 0px;color:#6c757d">
+            </MudIcon>
+        </ActivatorContent>
+        <ChildContent>
+            <MudMenuItem>Profile</MudMenuItem>
+            <MudMenuItem>Theme</MudMenuItem>
+            <MudMenuItem>Usage</MudMenuItem>
+            <MudMenuItem>Sign Out</MudMenuItem>
+        </ChildContent>
+    </MudMenu>
     <MudText Typo="Typo.h5" Class="ml-3">Application</MudText>
     <MudSpacer />
     <MudIconButton Icon="@Icons.Material.Filled.MoreVert" Color="Color.Inherit" Edge="Edge.End" />
