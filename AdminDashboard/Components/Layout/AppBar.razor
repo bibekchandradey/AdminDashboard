@@ -1,75 +1,16 @@
 ﻿@inject IDialogService DialogService
-@using Elements
+@using AdminDashboard.Components.Elements
 <MudAppBar Elevation="1">
 
-    <MudImage Src="Image/MenuImage/logo.png" Alt="Mony the dog" Width="100" Height="50" Class="mr-15" Elevation="25" />
-    <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Primary" Edge="Edge.Start" Class="ml-5"  />
+    <MudImage Src="Image/MenuImage/logo.png" Alt="Mony the dog" Width="100" Height="50" Class="mr-2" Elevation="25" />
+    <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Primary" Edge="Edge.Start" Class="ml-1"  />
     <MudFab Color="Color.Transparent" IconColor="Color.Primary" StartIcon="@Icons.Material.Filled.Search" Size="Size.Small" />
+
+    <MegaMenu></MegaMenu>
+
+    <SettingMenu></SettingMenu>
+
     
-    <MudMenu AnchorOrigin="Origin.BottomCenter" TransformOrigin="Origin.TopLeft" Class="ml-4" Dense>
-        <ActivatorContent >
-            <MudIcon Style="font-size:0.99rem;margin:2px 5px 0 3px;color:#6c757d" Icon="@Icons.Material.Outlined.CardGiftcard"></MudIcon>
-            <MudText Style="font-size:0.85rem;color:#6c757d">Mega Menu</MudText>
-            <MudIcon Icon="@Icons.Material.Filled.KeyboardArrowDown"
-                     Style="color:#6C757D;font-size:0.95rem;margin:3px 0px 0 0px;color:#6c757d">
-            </MudIcon>
-        </ActivatorContent>
-        <ChildContent>
-            <MudMenuItem Elavate="1">
-                <div style="width:780px; padding:5px;margin:0px">
-                    <MudGrid>
-                        <MudItem lg="4">
-                            <MudText Style="font-size:0.85rem;color:#6c757d">OverVier</MudText>
-                            <div class="d-flex">
-                                <MudIconButton Href="#"
-                                Size="Size.Small"
-                                               Icon="@Icons.Material.Outlined.AccountBalanceWallet"
-                                               aria-label="delete" Style="font-size:0.85rem;"
-                                               
-                                >
-                                </MudIconButton>
-                                <MudText Class="mt-1" Style="font-size:0.85rem;">
-                                    Contacts
-                                </MudText>
-                            </div>
-                            
-                            <MudText>OverVier</MudText>
-                            <MudText>OverVier</MudText>
-                            <MudText>OverVier</MudText>
-                        </MudItem>
-                        
-                        <MudItem lg="4">
-                            <MudText>Hi</MudText>
-                        </MudItem>
-                        
-                        <MudItem lg="4">
-                            <MudText>Hi</MudText>
-                        </MudItem>
-                        
-                    </MudGrid>
-                    
-                </div>
-            </MudMenuItem>
-           
-        </ChildContent>
-    </MudMenu>
-
-    <MudMenu AnchorOrigin="Origin.BottomCenter" TransformOrigin="Origin.TopLeft" Class="ml-4" Dense>
-        <ActivatorContent>
-            <MudAvatar Color="Color.Secondary" Class="mr-3" Size="Size.Small">4</MudAvatar>
-            <MudText Style="font-size:0.85rem;color:#6c757d">Settings</MudText>
-            <MudIcon Icon="@Icons.Material.Filled.KeyboardArrowDown"
-                     Style="color:#6C757D;font-size:0.95rem;margin:3px 0px 0 0px;color:#6c757d">
-            </MudIcon>
-        </ActivatorContent>
-        <ChildContent>
-            <MudMenuItem>Profile</MudMenuItem>
-            <MudMenuItem>Theme</MudMenuItem>
-            <MudMenuItem>Usage</MudMenuItem>
-            <MudMenuItem>Sign Out</MudMenuItem>
-        </ChildContent>
-    </MudMenu>
-
     <MudMenu AnchorOrigin="Origin.BottomCenter" TransformOrigin="Origin.TopLeft" Class="ml-4" Dense>
         <ActivatorContent>
             <MudIcon Style="font-size:0.99rem;margin:2px 5px 0 3px;color:#6c757d" Icon="@Icons.Material.Outlined.WbSunny"></MudIcon>
@@ -79,13 +20,498 @@
             </MudIcon>
         </ActivatorContent>
         <ChildContent>
-            <MudMenuItem>Profile</MudMenuItem>
-            <MudMenuItem>Theme</MudMenuItem>
-            <MudMenuItem>Usage</MudMenuItem>
-            <MudMenuItem>Sign Out</MudMenuItem>
+            <MudItem Class="pa-0 ma-0"   Style="width:310px;border-radius:20px">
+                <MudItem Class="pa-0 ma-0"
+                         Style="height:130px;
+                                background-image:url('https://i.postimg.cc/3rmnQvyX/Untitled-design-1.jpg');">
+                    <MudText Style="opacity:100%">
+                        b
+                    </MudText>
+                    <MudText Class="text-center ml-4"
+                             Style="color:antiquewhite; font-size:1.193rem; font-weight:800;">
+                        Overview
+
+                    </MudText>
+                    <MudText Class="text-center ml-4"
+                             Style="color:antiquewhite; font-size:0.793rem; font-weight:600; ">
+                        Unlimited Option
+                    </MudText>
+                    <div class="d-flix ml-4">
+                        <MudButton Variant="Variant.Filled"
+                                   Class="pa-1 mt-2"
+                                   Style="color: #fff;background-color: #00C853;border-color: #343a40; font-size:10px">
+                            Settings
+                        </MudButton>
+                        <MudButton Variant="Variant.Filled"
+                                   Class="pa-1 mt-2"
+                                   Style="color: #212529; background-color: #f7b924; 
+                                          border-color: #f7b924; font-size:9px; min-width:0px">
+                            <MudIcon Icon="@Icons.Material.Filled.Settings" Size="Size.Small"></MudIcon>
+                        </MudButton>
+                    </div>
+                </MudItem>
+                <MudItem>
+                    <MudMenuItem   >
+                       <div class="d-flex">
+                            <MudIcon Style="color:#BBCCD6" IconSize="Size.Small" Icon="@Icons.Material.Outlined.InsertDriveFile"></MudIcon>
+                            <MudText Class="mt-1 ml-1" Style="font-size: 0.78333rem; font-weight: 400 ;">Graphic Design</MudText>
+                       </div>
+                        
+                    </MudMenuItem>
+
+                    <MudMenuItem>
+                        <div class="d-flex">
+                            <MudIcon Style="color:#BBCCD6" IconSize="Size.Small" Icon="@Icons.Material.Outlined.InsertDriveFile"></MudIcon>
+                            <MudText Class="mt-1 ml-1" Style="font-size: 0.78333rem; font-weight: 400 ;">App Devlopment</MudText>
+                        </div>
+
+                    </MudMenuItem>
+                    <MudMenuItem>
+                        <div class="d-flex">
+                            <MudIcon Style="color:#BBCCD6" IconSize="Size.Small" Icon="@Icons.Material.Outlined.InsertDriveFile"></MudIcon>
+                            <MudText Class="mt-1 ml-1" Style="font-size: 0.78333rem; font-weight: 400 ;">Icon Design</MudText>
+                        </div>
+
+                    </MudMenuItem>
+                 
+                    <MudDivider Class="mt-4 mb-4"></MudDivider>
+                    <MudMenuItem>
+                        <div class="d-flex">
+                            <MudIcon Style="color:#BBCCD6" IconSize="Size.Small" Icon="@Icons.Material.Outlined.InsertDriveFile"></MudIcon>
+                            <MudText Class="mt-1 ml-1" Style="font-size: 0.78333rem; font-weight: 400 ;">Miscellaneous</MudText>
+                        </div>
+
+                    </MudMenuItem>
+                    <MudMenuItem>
+                        <div class="d-flex mb-3">
+                            <MudIcon Style="color:#BBCCD6" IconSize="Size.Small" Icon="@Icons.Material.Outlined.InsertDriveFile"></MudIcon>
+                            <MudText Class="mt-1 ml-1" Style="font-size: 0.78333rem; font-weight: 400 ;">Fronted Dev</MudText>
+                        </div>
+
+                    </MudMenuItem>
+                </MudItem>
+                
+            </MudItem>
         </ChildContent>
     </MudMenu>
-    <MudText Typo="Typo.h5" Class="ml-3">Application</MudText>
+
+    <MudMenu AnchorOrigin="Origin.BottomCenter" TransformOrigin="Origin.TopRight" Class="ml-4" Dense>
+        <ActivatorContent>
+            <MudFab  Size="Size.Small" Style="color:#7695E2"
+                    StartIcon="@Icons.Material.Outlined.Menu" />
+        </ActivatorContent>
+        <ChildContent>
+            <MudItem Class="pa-0 ma-0" Style="width:350px;border-radius:20px">
+                <MudItem Class="pa-0 ma-0"
+                         Style="height:90px;
+                                background-image:url('https://i.postimg.cc/25HLHnnQ/33002499-rie6.jpg');">
+                    <MudText Style="opacity:100%">
+                        b
+                    </MudText>
+                    <MudText Align="Align.Center" Class="text-center ml-4"
+                             Style="color:antiquewhite; font-size:1.193rem; font-weight:800;">
+                        Grid Dashboard
+
+                    </MudText>
+                    <MudText Align="Align.Center" Class="text-center ml-4"
+                             Style="color:antiquewhite; font-size:0.793rem; font-weight:600; ">
+                        Easy grid navigation inside dropdowns
+                    </MudText>
+                   
+                </MudItem>
+                <MudItem>
+                    <MudGrid>
+                        <MudItem  lg="4">
+                            <MudMenuItem  >
+                                 <MudIcon 
+                                     
+                                     Class="px-auto" 
+                                     Icon="@Icons.Material.Outlined.PrecisionManufacturing"
+                                         Style="font-size:2.5rem; color:#fbc2eb; opacity=0.6"></MudIcon>
+                                 <MudText Style="font-size:0.94rem; font-weight:300" Class="ma-0 pa-0">Automation</MudText>
+                            </MudMenuItem>
+                        </MudItem>
+                        <MudDivider Class="mt-6" Vertical="true" FlexItem="true"></MudDivider>
+                        <MudItem  lg="4">
+                            <MudMenuItem  >
+                                 <MudIcon 
+                                     
+                                     Class="px-auto" 
+                                     Icon="@Icons.Material.Outlined.PrecisionManufacturing"
+                                         Style="font-size:2.5rem; color:#fbc2eb; opacity=0.6"></MudIcon>
+                                 <MudText Style="font-size:0.94rem; font-weight:300" Class="ma-0 pa-0">Automation</MudText>
+                            </MudMenuItem>
+                        </MudItem>
+                        <MudDivider Class="mt-6" Vertical="true" FlexItem="true"></MudDivider>
+                        <MudItem  lg="3">
+                            <MudMenuItem >
+                                <MudIcon Class="px-auto"
+                                         Icon="@Icons.Material.Outlined.PrecisionManufacturing"
+                                         Style="font-size:2.5rem; color:#fbc2eb; opacity=0.6"></MudIcon>
+                                <MudText Style="font-size:0.94rem; font-weight:300" Class="ma-0 pa-0">Automation</MudText>
+                            </MudMenuItem>
+                        </MudItem>
+                        <MudDivider></MudDivider>
+                        <MudItem lg="4">
+                            <MudMenuItem>
+                                <MudIcon Class="px-auto"
+                                         Icon="@Icons.Material.Outlined.PrecisionManufacturing"
+                                         Style="font-size:2.5rem; color:#fbc2eb; opacity=0.6"></MudIcon>
+                                <MudText Style="font-size:0.94rem; font-weight:300" Class="ma-0 pa-0">Automation</MudText>
+                            </MudMenuItem>
+                        </MudItem>
+                        <MudDivider Class="" Vertical="true" FlexItem="true"></MudDivider>
+                        <MudItem lg="4">
+                            <MudMenuItem>
+                                <MudIcon Class="px-auto"
+                                         Icon="@Icons.Material.Outlined.PrecisionManufacturing"
+                                         Style="font-size:2.5rem; color:#fbc2eb; opacity=0.6"></MudIcon>
+                                <MudText Style="font-size:0.94rem; font-weight:300" Class="ma-0 pa-0">Automation</MudText>
+                            </MudMenuItem>
+                        </MudItem>
+                        <MudDivider Class="" Vertical="true" FlexItem="true"></MudDivider>
+                        <MudItem lg="3">
+                            <MudMenuItem>
+                                <MudIcon Class="px-auto"
+                                         Icon="@Icons.Material.Outlined.PrecisionManufacturing"
+                                         Style="font-size:2.5rem; color:#fbc2eb; opacity=0.6"></MudIcon>
+                                <MudText Style="font-size:0.94rem; font-weight:300" Class="ma-0 pa-0">Automation</MudText>
+                            </MudMenuItem>
+                        </MudItem>
+                    </MudGrid>
+                    <MudItem Class="pa-3 d-flex justify-center" Style="border-top: 1px solid #E0E0E0;">
+                        <MudButton Variant="Variant.Filled" Size="Size.Small" Color="Color.Primary">Follow-Ups</MudButton>
+                    </MudItem>
+                </MudItem>
+            </MudItem>
+        </ChildContent>
+    </MudMenu>
+    
+    <MudMenu AnchorOrigin="Origin.BottomCenter" TransformOrigin="Origin.TopLeft" Class="ml-4" Dense>
+        <ActivatorContent>
+            <MudFab Size="Size.Small" Style="color:#E15778"
+                    StartIcon="@Icons.Material.Outlined.Campaign" />
+        </ActivatorContent>
+        <ChildContent>
+            <MudItem Class="pa-0 ma-0" Style="width:310px;border-radius:20px">
+                <MudItem Class="pa-0 ma-0"
+                         Style="height:130px;
+                                background-image:url('https://i.postimg.cc/3rmnQvyX/Untitled-design-1.jpg');">
+                    <MudText Style="opacity:100%">
+                        b
+                    </MudText>
+                    <MudText Class="text-center ml-4"
+                             Style="color:antiquewhite; font-size:1.193rem; font-weight:800;">
+                        Overview
+
+                    </MudText>
+                    <MudText Class="text-center ml-4"
+                             Style="color:antiquewhite; font-size:0.793rem; font-weight:600; ">
+                        Unlimited Option
+                    </MudText>
+                    <div class="d-flix ml-4">
+                        <MudButton Variant="Variant.Filled"
+                                   Class="pa-1 mt-2"
+                                   Style="color: #fff;background-color: #00C853;border-color: #343a40; font-size:10px">
+                            Settings
+                        </MudButton>
+                        <MudButton Variant="Variant.Filled"
+                                   Class="pa-1 mt-2"
+                                   Style="color: #212529; background-color: #f7b924;
+                                          border-color: #f7b924; font-size:9px; min-width:0px">
+                            <MudIcon Icon="@Icons.Material.Filled.Settings" Size="Size.Small"></MudIcon>
+                        </MudButton>
+                    </div>
+                </MudItem>
+                <MudItem>
+                    <MudMenuItem>
+                        <div class="d-flex">
+                            <MudIcon Style="color:#BBCCD6" IconSize="Size.Small" Icon="@Icons.Material.Outlined.InsertDriveFile"></MudIcon>
+                            <MudText Class="mt-1 ml-1" Style="font-size: 0.78333rem; font-weight: 400 ;">Graphic Design</MudText>
+                        </div>
+
+                    </MudMenuItem>
+
+                    <MudMenuItem>
+                        <div class="d-flex">
+                            <MudIcon Style="color:#BBCCD6" IconSize="Size.Small" Icon="@Icons.Material.Outlined.InsertDriveFile"></MudIcon>
+                            <MudText Class="mt-1 ml-1" Style="font-size: 0.78333rem; font-weight: 400 ;">App Devlopment</MudText>
+                        </div>
+
+                    </MudMenuItem>
+                    <MudMenuItem>
+                        <div class="d-flex">
+                            <MudIcon Style="color:#BBCCD6" IconSize="Size.Small" Icon="@Icons.Material.Outlined.InsertDriveFile"></MudIcon>
+                            <MudText Class="mt-1 ml-1" Style="font-size: 0.78333rem; font-weight: 400 ;">Icon Design</MudText>
+                        </div>
+
+                    </MudMenuItem>
+
+                    <MudDivider Class="mt-4 mb-4"></MudDivider>
+                    <MudMenuItem>
+                        <div class="d-flex">
+                            <MudIcon Style="color:#BBCCD6" IconSize="Size.Small" Icon="@Icons.Material.Outlined.InsertDriveFile"></MudIcon>
+                            <MudText Class="mt-1 ml-1" Style="font-size: 0.78333rem; font-weight: 400 ;">Miscellaneous</MudText>
+                        </div>
+
+                    </MudMenuItem>
+                    <MudMenuItem>
+                        <div class="d-flex mb-3">
+                            <MudIcon Style="color:#BBCCD6" IconSize="Size.Small" Icon="@Icons.Material.Outlined.InsertDriveFile"></MudIcon>
+                            <MudText Class="mt-1 ml-1" Style="font-size: 0.78333rem; font-weight: 400 ;">Fronted Dev</MudText>
+                        </div>
+
+                    </MudMenuItem>
+                </MudItem>
+
+            </MudItem>
+        </ChildContent>
+    </MudMenu>
+
+    <MudMenu AnchorOrigin="Origin.BottomCenter" TransformOrigin="Origin.TopLeft" Class="ml-4" Dense>
+        <ActivatorContent>
+            <MudFab Size="Size.Small" Style="color:#4DC989"
+                    StartIcon="@Icons.Material.Outlined.Language" />
+        </ActivatorContent>
+        <ChildContent>
+            <MudItem Class="pa-0 ma-0" Style="width:310px;border-radius:20px">
+                <MudItem Class="pa-0 ma-0"
+                         Style="height:130px;
+                                background-image:url('https://i.postimg.cc/3rmnQvyX/Untitled-design-1.jpg');">
+                    <MudText Style="opacity:100%">
+                        b
+                    </MudText>
+                    <MudText Class="text-center ml-4"
+                             Style="color:antiquewhite; font-size:1.193rem; font-weight:800;">
+                        Overview
+
+                    </MudText>
+                    <MudText Class="text-center ml-4"
+                             Style="color:antiquewhite; font-size:0.793rem; font-weight:600; ">
+                        Unlimited Option
+                    </MudText>
+                    <div class="d-flix ml-4">
+                        <MudButton Variant="Variant.Filled"
+                                   Class="pa-1 mt-2"
+                                   Style="color: #fff;background-color: #00C853;border-color: #343a40; font-size:10px">
+                            Settings
+                        </MudButton>
+                        <MudButton Variant="Variant.Filled"
+                                   Class="pa-1 mt-2"
+                                   Style="color: #212529; background-color: #f7b924;
+                                          border-color: #f7b924; font-size:9px; min-width:0px">
+                            <MudIcon Icon="@Icons.Material.Filled.Settings" Size="Size.Small"></MudIcon>
+                        </MudButton>
+                    </div>
+                </MudItem>
+                <MudItem>
+                    <MudMenuItem>
+                        <div class="d-flex">
+                            <MudIcon Style="color:#BBCCD6" IconSize="Size.Small" Icon="@Icons.Material.Outlined.InsertDriveFile"></MudIcon>
+                            <MudText Class="mt-1 ml-1" Style="font-size: 0.78333rem; font-weight: 400 ;">Graphic Design</MudText>
+                        </div>
+
+                    </MudMenuItem>
+
+                    <MudMenuItem>
+                        <div class="d-flex">
+                            <MudIcon Style="color:#BBCCD6" IconSize="Size.Small" Icon="@Icons.Material.Outlined.InsertDriveFile"></MudIcon>
+                            <MudText Class="mt-1 ml-1" Style="font-size: 0.78333rem; font-weight: 400 ;">App Devlopment</MudText>
+                        </div>
+
+                    </MudMenuItem>
+                    <MudMenuItem>
+                        <div class="d-flex">
+                            <MudIcon Style="color:#BBCCD6" IconSize="Size.Small" Icon="@Icons.Material.Outlined.InsertDriveFile"></MudIcon>
+                            <MudText Class="mt-1 ml-1" Style="font-size: 0.78333rem; font-weight: 400 ;">Icon Design</MudText>
+                        </div>
+
+                    </MudMenuItem>
+
+                    <MudDivider Class="mt-4 mb-4"></MudDivider>
+                    <MudMenuItem>
+                        <div class="d-flex">
+                            <MudIcon Style="color:#BBCCD6" IconSize="Size.Small" Icon="@Icons.Material.Outlined.InsertDriveFile"></MudIcon>
+                            <MudText Class="mt-1 ml-1" Style="font-size: 0.78333rem; font-weight: 400 ;">Miscellaneous</MudText>
+                        </div>
+
+                    </MudMenuItem>
+                    <MudMenuItem>
+                        <div class="d-flex mb-3">
+                            <MudIcon Style="color:#BBCCD6" IconSize="Size.Small" Icon="@Icons.Material.Outlined.InsertDriveFile"></MudIcon>
+                            <MudText Class="mt-1 ml-1" Style="font-size: 0.78333rem; font-weight: 400 ;">Fronted Dev</MudText>
+                        </div>
+
+                    </MudMenuItem>
+                </MudItem>
+
+            </MudItem>
+        </ChildContent>
+    </MudMenu>
+
+    <MudMenu AnchorOrigin="Origin.BottomCenter" TransformOrigin="Origin.TopLeft" Class="ml-4" Dense>
+        <ActivatorContent>
+            <MudFab Size="Size.Small" Style="color:#4DC989"
+                    StartIcon="@Icons.Material.Outlined.PieChartOutline" />
+        </ActivatorContent>
+        <ChildContent>
+            <MudItem Class="pa-0 ma-0" Style="width:310px;border-radius:20px">
+                <MudItem Class="pa-0 ma-0"
+                         Style="height:130px;
+                                background-image:url('https://i.postimg.cc/3rmnQvyX/Untitled-design-1.jpg');">
+                    <MudText Style="opacity:100%">
+                        b
+                    </MudText>
+                    <MudText Class="text-center ml-4"
+                             Style="color:antiquewhite; font-size:1.193rem; font-weight:800;">
+                        Overview
+
+                    </MudText>
+                    <MudText Class="text-center ml-4"
+                             Style="color:antiquewhite; font-size:0.793rem; font-weight:600; ">
+                        Unlimited Option
+                    </MudText>
+                    <div class="d-flix ml-4">
+                        <MudButton Variant="Variant.Filled"
+                                   Class="pa-1 mt-2"
+                                   Style="color: #fff;background-color: #00C853;border-color: #343a40; font-size:10px">
+                            Settings
+                        </MudButton>
+                        <MudButton Variant="Variant.Filled"
+                                   Class="pa-1 mt-2"
+                                   Style="color: #212529; background-color: #f7b924;
+                                          border-color: #f7b924; font-size:9px; min-width:0px">
+                            <MudIcon Icon="@Icons.Material.Filled.Settings" Size="Size.Small"></MudIcon>
+                        </MudButton>
+                    </div>
+                </MudItem>
+                <MudItem>
+                    <MudMenuItem>
+                        <div class="d-flex">
+                            <MudIcon Style="color:#BBCCD6" IconSize="Size.Small" Icon="@Icons.Material.Outlined.InsertDriveFile"></MudIcon>
+                            <MudText Class="mt-1 ml-1" Style="font-size: 0.78333rem; font-weight: 400 ;">Graphic Design</MudText>
+                        </div>
+
+                    </MudMenuItem>
+
+                    <MudMenuItem>
+                        <div class="d-flex">
+                            <MudIcon Style="color:#BBCCD6" IconSize="Size.Small" Icon="@Icons.Material.Outlined.InsertDriveFile"></MudIcon>
+                            <MudText Class="mt-1 ml-1" Style="font-size: 0.78333rem; font-weight: 400 ;">App Devlopment</MudText>
+                        </div>
+
+                    </MudMenuItem>
+                    <MudMenuItem>
+                        <div class="d-flex">
+                            <MudIcon Style="color:#BBCCD6" IconSize="Size.Small" Icon="@Icons.Material.Outlined.InsertDriveFile"></MudIcon>
+                            <MudText Class="mt-1 ml-1" Style="font-size: 0.78333rem; font-weight: 400 ;">Icon Design</MudText>
+                        </div>
+
+                    </MudMenuItem>
+
+                    <MudDivider Class="mt-4 mb-4"></MudDivider>
+                    <MudMenuItem>
+                        <div class="d-flex">
+                            <MudIcon Style="color:#BBCCD6" IconSize="Size.Small" Icon="@Icons.Material.Outlined.InsertDriveFile"></MudIcon>
+                            <MudText Class="mt-1 ml-1" Style="font-size: 0.78333rem; font-weight: 400 ;">Miscellaneous</MudText>
+                        </div>
+
+                    </MudMenuItem>
+                    <MudMenuItem>
+                        <div class="d-flex mb-3">
+                            <MudIcon Style="color:#BBCCD6" IconSize="Size.Small" Icon="@Icons.Material.Outlined.InsertDriveFile"></MudIcon>
+                            <MudText Class="mt-1 ml-1" Style="font-size: 0.78333rem; font-weight: 400 ;">Fronted Dev</MudText>
+                        </div>
+
+                    </MudMenuItem>
+                </MudItem>
+
+            </MudItem>
+        </ChildContent>
+    </MudMenu>
+    <MudDivider Vertical="true" FlexItem="true" DividerType="DividerType.Middle"></MudDivider>
+
+    <MudMenu AnchorOrigin="Origin.BottomCenter" TransformOrigin="Origin.TopRight" Class="ml-4" Dense>
+        <ActivatorContent>
+            <MudAvatar>
+                <MudImage Src="https://i.postimg.cc/tJYKny4W/freepik-export-202409050425212-E56.jpg"></MudImage>
+            </MudAvatar>
+        </ActivatorContent>
+        <ChildContent>
+            <MudItem Class="pa-0 ma-0" Style="width:310px;border-radius:20px">
+                <MudItem Class="pa-0 ma-0"
+                         Style="height:130px;
+                                background-image:url('https://i.postimg.cc/3rmnQvyX/Untitled-design-1.jpg');">
+                    <MudText Style="opacity:100%">
+                        b
+                    </MudText>
+                    <MudText Class="text-center ml-4"
+                             Style="color:antiquewhite; font-size:1.193rem; font-weight:800;">
+                        Overview
+
+                    </MudText>
+                    <MudText Class="text-center ml-4"
+                             Style="color:antiquewhite; font-size:0.793rem; font-weight:600; ">
+                        Unlimited Option
+                    </MudText>
+                    <div class="d-flix ml-4">
+                        <MudButton Variant="Variant.Filled"
+                                   Class="pa-1 mt-2"
+                                   Style="color: #fff;background-color: #00C853;border-color: #343a40; font-size:10px">
+                            Settings
+                        </MudButton>
+                        <MudButton Variant="Variant.Filled"
+                                   Class="pa-1 mt-2"
+                                   Style="color: #212529; background-color: #f7b924;
+                                          border-color: #f7b924; font-size:9px; min-width:0px">
+                            <MudIcon Icon="@Icons.Material.Filled.Settings" Size="Size.Small"></MudIcon>
+                        </MudButton>
+                    </div>
+                </MudItem>
+                <MudItem>
+                    <MudMenuItem>
+                        <div class="d-flex">
+                            <MudIcon Style="color:#BBCCD6" IconSize="Size.Small" Icon="@Icons.Material.Outlined.InsertDriveFile"></MudIcon>
+                            <MudText Class="mt-1 ml-1" Style="font-size: 0.78333rem; font-weight: 400 ;">Graphic Design</MudText>
+                        </div>
+
+                    </MudMenuItem>
+
+                    <MudMenuItem>
+                        <div class="d-flex">
+                            <MudIcon Style="color:#BBCCD6" IconSize="Size.Small" Icon="@Icons.Material.Outlined.InsertDriveFile"></MudIcon>
+                            <MudText Class="mt-1 ml-1" Style="font-size: 0.78333rem; font-weight: 400 ;">App Devlopment</MudText>
+                        </div>
+
+                    </MudMenuItem>
+                    <MudMenuItem>
+                        <div class="d-flex">
+                            <MudIcon Style="color:#BBCCD6" IconSize="Size.Small" Icon="@Icons.Material.Outlined.InsertDriveFile"></MudIcon>
+                            <MudText Class="mt-1 ml-1" Style="font-size: 0.78333rem; font-weight: 400 ;">Icon Design</MudText>
+                        </div>
+
+                    </MudMenuItem>
+
+                    <MudDivider Class="mt-4 mb-4"></MudDivider>
+                    <MudMenuItem>
+                        <div class="d-flex">
+                            <MudIcon Style="color:#BBCCD6" IconSize="Size.Small" Icon="@Icons.Material.Outlined.InsertDriveFile"></MudIcon>
+                            <MudText Class="mt-1 ml-1" Style="font-size: 0.78333rem; font-weight: 400 ;">Miscellaneous</MudText>
+                        </div>
+
+                    </MudMenuItem>
+                    <MudMenuItem>
+                        <div class="d-flex mb-3">
+                            <MudIcon Style="color:#BBCCD6" IconSize="Size.Small" Icon="@Icons.Material.Outlined.InsertDriveFile"></MudIcon>
+                            <MudText Class="mt-1 ml-1" Style="font-size: 0.78333rem; font-weight: 400 ;">Fronted Dev</MudText>
+                        </div>
+
+                    </MudMenuItem>
+                </MudItem>
+
+            </MudItem>
+        </ChildContent>
+    </MudMenu>
     <MudSpacer />
     <MudIconButton Icon="@Icons.Material.Filled.MoreVert" Color="Color.Inherit" Edge="Edge.End" />
 </MudAppBar>

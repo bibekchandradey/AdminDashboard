@@ -1,14 +1,131 @@
-﻿<MudButton OnClick="@AddMoreContent" Color="Color.Error">Add another line</MudButton>
-@foreach (var item in _content)
-{
-	<MudText Class="pa-2" Align="Align.Center">@item</MudText>
-}
-@code {
+﻿<MudMenu AnchorOrigin="Origin.BottomCenter" TransformOrigin="Origin.TopLeft" Class="ml-4" Dense>
+    <ActivatorContent>
+        <MudIcon Style="font-size:0.99rem;margin:2px 5px 0 3px;color:#6c757d" Icon="@Icons.Material.Outlined.CardGiftcard"></MudIcon>
+        <MudText Style="font-size:0.85rem;color:#6c757d">Mega Menu</MudText>
+        <MudIcon Icon="@Icons.Material.Filled.KeyboardArrowDown"
+                 Style="color:#6C757D;font-size:0.95rem;margin:3px 0px 0 0px;color:#6c757d">
+        </MudIcon>
+    </ActivatorContent>
+    <ChildContent>
+        <MudMenuItem Elavate="1">
+            <div style="width:780px; padding:5px;margin:0px">
+                <MudGrid>
+                    <MudItem lg="4">
+                        <MudText Style="font-size:0.85rem;color:#6c757d">OverView</MudText>
+                        <div class="d-flex mt-2 mb-2">
+                            <MudIconButton Href="#"
+                                           Size="Size.Small"
+                                           Icon="@Icons.Material.Outlined.AccountBalanceWallet"
+                                           aria-label="delete" Style="font-size:0.85rem; font-weight:300">
+                            </MudIconButton>
+                            <MudLink Href="#" Underline="Underline.None" Class="mt-1" Style="font-size:0.85rem; font-weight:300">
+                                Contacts
+                            </MudLink>
+                        </div>
 
-	private List<String> _content = new();
+                        <div class="d-flex  mb-2">
+                            <MudIconButton Href="#"
+                                           Size="Size.Small"
+                                           Icon="@Icons.Material.Outlined.LibraryBooks"
+                                           aria-label="delete" Style="font-size:0.85rem; font-weight:300">
+                            </MudIconButton>
+                            <MudLink Href="#" Underline="Underline.None" Class="mt-1" Style="font-size:0.85rem; font-weight:300">
+                                incidents
+                            </MudLink>
+                        </div>
 
-	public void AddMoreContent()
-	{
-		_content.Add("line of text");
-	}
-}
+                        <div class="d-flex  mb-2">
+                            <MudIconButton Href="#"
+                                           Size="Size.Small"
+                                           Icon="@Icons.Material.Outlined.InsertPhoto"
+                                           aria-label="delete" Style="font-size:0.85rem; font-weight:300">
+                            </MudIconButton>
+                            <MudLink Href="#" Underline="Underline.None" Class="mt-1" Style="font-size:0.85rem; font-weight:300">
+                                Copanies
+                            </MudLink>
+                        </div>
+
+                        <div class="d-flex  mb-2">
+                            <MudIconButton Href="#"
+                                           Size="Size.Small"
+                                           Icon="@Icons.Material.Outlined.InsertDriveFile"
+                                           aria-label="delete" Style="font-size:0.85rem; font-weight:300">
+                            </MudIconButton>
+                            <MudLink Href="#" Underline="Underline.None" Class="mt-1" Style="font-size:0.85rem; font-weight:300">
+                                Dashboards
+                            </MudLink>
+                        </div>
+
+                    </MudItem>
+                    <MudDivider Vertical="true" DividerType="DividerType.Middle" FlexItem="true" />
+                    <MudItem lg="4">
+                        <MudText Style="font-size:0.85rem;color:#6c757d">Favourites</MudText>
+                        <div class="d-flex mb-2 mt-2">
+
+                            <MudLink Href="#" Underline="Underline.None" Class="mt-1" Style="font-size:0.85rem; font-weight:300">
+                                Reports and Conversion
+                            </MudLink>
+                        </div>
+
+                        <div class="d-flex mb-2">
+
+                            <MudLink Href="#" Underline="Underline.None" Class="mt-1" Style="font-size:0.85rem; font-weight:300">
+                                Quick Start
+                            </MudLink>
+                        </div>
+
+                        <div class="d-flex  mb-2">
+
+                            <MudLink Href="#" Underline="Underline.None" Class="mt-1" Style="font-size:0.85rem; font-weight:300">
+                                Users and Group
+                            </MudLink>
+                        </div>
+
+                        <div class="d-flex  mb-2">
+
+                            <MudLink Href="#" Underline="Underline.None" Class="mt-1" Style="font-size:0.85rem; font-weight:300">
+                                Properties
+                            </MudLink>
+                        </div>
+                    </MudItem>
+                    <MudDivider Vertical="true" DividerType="DividerType.Middle" FlexItem="true" />
+                    <MudItem lg="3">
+                        <MudText Style="font-size:0.85rem;color:#6c757d"> Sales & Marketing</MudText>
+
+
+                        <div class="d-flex mb-2 mt-2">
+
+                            <MudLink Href="#" Underline="Underline.None" Class="mt-1" Style="font-size:0.85rem; font-weight:300">
+                                Queues
+                            </MudLink>
+                        </div>
+
+                        <div class="d-flex  mb-2">
+
+                            <MudLink Href="#" Underline="Underline.None" Class="mt-1" Style="font-size:0.85rem; font-weight:300">
+                                Resources Group
+                            </MudLink>
+                        </div>
+
+                        <div class="d-flex  mb-2">
+
+                            <MudLink Href="#" Underline="Underline.None" Class="mt-1" Style="font-size:0.85rem; font-weight:300">
+                                Goal Metrics
+                            </MudLink>
+                        </div>
+
+                        <div class="d-flex mb-2">
+
+                            <MudLink Href="#" Underline="Underline.None" Class="mt-1" Style="font-size:0.85rem; font-weight:300">
+                                Campaigns
+                            </MudLink>
+                        </div>
+                    </MudItem>
+
+                </MudGrid>
+
+            </div>
+        </MudMenuItem>
+
+    </ChildContent>
+</MudMenu>
